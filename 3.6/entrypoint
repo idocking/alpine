@@ -2,7 +2,7 @@
 set -e
 
 if [ -n "$TZ" ] && [ -f /usr/share/zoneinfo/$TZ ]; then
-	  	cp /usr/share/zoneinfo/$TZ /etc/localtime
+	  	cp -f /usr/share/zoneinfo/$TZ /etc/localtime
 fi
 
 exec "$@"
